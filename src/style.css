@@ -1,0 +1,182 @@
+
+.fira-code-font {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#app{
+    width: 100%;
+    height:100%;
+    position: relative;
+}
+
+#app > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+*{
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    font-family: 'Fira code' , 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#search {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 400px;
+    max-width: 80%;
+    padding: 16px 24px;
+    border-radius: 25px;
+    font-size: 15px;
+    outline: none;
+    border-color: 2px solid rgba(219, 219, 219, 0.968) ;
+    color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: all 0.4s ease;
+}
+
+#search:focus{
+    width:500px;
+    size: 20%;
+}
+
+#clock{
+    position: absolute;
+    top:9%;
+    left: 50%;
+    transform: translateX(-50%) scale(1.1, 1.5);
+    color: rgb(255, 255, 255) ;
+    font-size: 50px;
+    font-weight: 600;
+    z-index: 10; 
+    -webkit-text-stroke: 1px rgb(1, 1, 1); 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#date{
+   position: absolute;
+   top: 23%;
+   left: 50%;
+   transform: translateX(-50%) scale(1.1,1.1);
+   color: rgb(228, 228, 228) ;
+   font-size: 20px;
+   font-weight: 500;
+   z-index: 10;  
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+   -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+#shortcuts{
+    position: relative;
+    top: 41%;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+#shortcuts a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+#shortcuts a:hover{
+    transform: scale(1.12);
+}
+
+#shortcuts img{
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    background: transparent;
+}
+
+#quick-note {
+   width: 380px;
+   margin-top: 190px;
+   align-items: center;
+   justify-content: center;
+   display: block;
+   position: fixed;
+   top: 35%;
+   left:50%;
+   transform: translate(-50%, -50%) scale(0.90);
+   padding: 18px 20px;
+   background: rgba(0, 0, 0, 0.35);
+   backdrop-filter: blur(10px);
+   border: 2px solid rgb(0, 0, 0);
+   border-radius: 20px;
+   color: white;
+   box-sizing: border-box;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#quick-note:focus-within{
+    transform: translate(-50%, -50%) scale(1.0) ;
+}
+
+#quick-note h2 {
+   margin: 0 0 12px;
+   font-size: 20px;
+   color: white;
+   text-shadow: 2px 2px 4px black;
+}
+
+#note {
+   width: 100%;
+   height: 90px;
+   box-sizing: border-box;
+   padding: 10px;
+   resize: none;
+   background: rgba(255, 255, 255, 0.15);
+   border: 1px solid rgba(255, 255, 255, 0.5);
+   border-radius: 12px;
+   color: white;
+   font-size: 14px;
+   outline: none;
+}
+
+#note::placeholder {
+   color: rgba(255, 255, 255, 0.75);
+}
+
+#note:focus {
+   border-color: white;
+}
+
+#clear-note {
+   margin-top: 10px;
+   padding: 6px 14px;
+   background: rgba(255, 255, 255, 0.2);
+   border: 1px solid rgba(255, 255, 255, 0.6);
+   border-radius: 15px;
+   color: white;
+   cursor: pointer;
+}
+
+#clear-note:hover {
+   background: rgba(255, 255, 255, 0.35);
+}
+
